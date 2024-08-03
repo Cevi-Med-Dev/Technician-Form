@@ -1,0 +1,137 @@
+body{
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#formContainer{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+
+}
+#flags{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+.input{
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #D9D9D9;
+    margin-right: 10px;
+}
+.split{
+    display: flex;
+    text-align: center;
+    flex-direction: column !important;
+}
+.splitH{
+    display: flex;
+    justify-content: space-around;
+}
+select{
+    cursor: pointer;
+}
+input{
+    outline: none;
+    cursor: pointer;
+}
+textarea{
+    outline: none;
+}
+.input:focus{
+    border: 1px solid #07b30aa9;
+    
+}
+#fields {
+    display: flex;
+    flex-direction: column;
+}
+#fields aside{
+    display: flex !important;
+    justify-content: space-evenly;
+    text-align: center;
+    margin: 10px;
+}
+.evidence{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input[type="file"] {
+    display: none;
+  }
+  
+  .evidenceBtn{
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    cursor: pointer;
+  }
+#fields aside div{
+    display: flex;
+    flex-direction: column;
+}
+#formContainer hr{
+    margin: 15px;
+}
+#formContainer label{
+    font-size: 14px;
+    margin: 5px;
+}
+#formContainer textarea{
+   height: 125px;
+}
+.btn{
+    width: 80%;
+    margin: 10px;
+    border-radius: 15px;
+    border: 2px solid white;
+    padding: 6px 12px;
+    cursor: pointer;
+    background-color: #C40C11;
+    color: white;
+}
+.btn:hover{
+    background-color: white;
+    border: 1px solid #C40C11;
+    color: #C40C11;
+    font-weight: bolder;
+    animation: alternate;
+}
+select:hover{
+    border: 1px solid #07b30aa9;
+
+}
+.btnContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+::placeholder{
+    font-size: 12px;
+}
+h4{
+    text-align: center;
+}
+.smileRating{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 20px 10px;
+}
+.smileRating img{
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+}
+#moodRate{
+    opacity: 0;
+}

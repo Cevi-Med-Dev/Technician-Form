@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>CeviMed Customer Service Form</title>
+</head>
+
+<body>
+    <section id="formContainer">
+
+        <h1 class="animate__animated animate__backInLeft">Cevi Med Tech Checklist</h1>
+        <form target="_blank"
+            action="https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflAs9AHZzei3EO7D/wtrC6Af88tnEk0Sb7"
+            method="post">
+
+            <section id="flags" class="animate__animated animate__bounceInLeft">
+
+                <select class="input" id="Type" name="Type">
+                    <option value="">Type of Equipment</option>
+                    <option value="examTables">Exam Tables</option>
+                    <option value="stretchers">Stretchers</option>
+                    <option value="hospitalBeds">Hospital Beds</option>
+                    <option value="procedureChairs">Procedure Chairs</option>
+                    <option value="podiatryChair">Podiatry Chair</option>
+                </select>
+                <select class="input" id="Model" name="Model">
+                    <option value="">Model</option>
+                    <option value="midmark">Midmark</option>
+                    <option value="stryker">Stryker</option>
+                    <option value="hillrom">HillRom</option>
+                    <option value="reliance">Reliance</option>
+                    <option value="other">Other</option>
+                </select>
+            </section>
+            <hr>
+            <section id="fields">
+                <aside>
+
+                    <div>
+                        <label for="issue">Issue</label>
+                        <textarea class="input animate__animated animate__bounceInRight" name="issue"
+                            rows="4"></textarea>
+                    </div>
+
+                    <div>
+
+                        <label for="resolution">Resolution or Verbal Agreement</label>
+                        <textarea class="input animate__animated animate__bounceInRight" name="resolution"
+                            rows="4"></textarea>
+                    </div>
+                </aside>
+            </section>
+            <hr>
+            <aside class="evidence animate__animated animate__bounceInLeft">
+                <div>
+                    <label class="evidenceBtn" for="file">Upload Evidence</label>
+                    <input type="file" id="file" name="file">
+                </div>
+            </aside>
+
+            <hr>
+            <div class="split input animate__animated animate__bounceInRight">
+                <label>Equipment completion : </label>
+                <label><input type="radio" name="resolved" value="20%">20%</label>
+                <label><input type="radio" name="resolved" value="40%">40%</label>
+                <label><input type="radio" name="resolved" value="60%">60%</label>
+                <label><input type="radio" name="resolved" value="80%">80%</label>
+                <label><input type="radio" name="resolved" value="10%">100%</label>
+            </div>
+
+            <br>
+        
+            <aside class="splitH">
+                <div class="split animate__animated animate__bounceInLeft">
+                    <label> Procedures : </label>
+                    <label><input type="checkbox" name="tested" value="tested">Tested</label>
+                    <label><input type="checkbox" name="cleaned" value="cleaned">Cleaned</label>
+                    <label><input type="checkbox" name="painted" value="painted">Painted</label>
+                    <label><input type="checkbox" name="Wrapped" value="Wrapped">Wrapped</label>
+                </div>
+                <div class="split animate__bounceInRight">
+
+                    <label><input type="checkbox" name="pendingIssues" value="pendingIssues">pending Issues</label>
+                    <textarea placeholder="give details about pending issues.." class="input animate__animated animate__bounceInRight" name="resolution"
+                        rows="4"></textarea>
+                </div>
+
+            </aside>
+            <hr>
+            <div>
+                <h4>How Do You Feel ?</h4>
+                <section class="smileRating">
+                    <img src="./assets/imgs/happy.svg" name="happy" alt="happy">
+                    <img src="./assets/imgs/kindaHappy.svg" name="kindaHappy" alt="kinda happy">
+                    <img src="./assets/imgs/alright.svg" name="alright" alt="alright">
+                    <img src="./assets/imgs/kindaBad.svg" name="kindaBad" alt="kindabad">
+                    <img src="./assets/imgs/bad.svg" name="bad" alt="bad">
+                </section>
+                <div class="split">
+                    <label for="feedback">FeedBack</label>
+                    <textarea name="feedback" class="input animate__animated animate__bounceInRight" name="rate" rows="1"></textarea>
+                </div>
+                <input id="moodRate" name="moodRate" value="" />
+            </div>
+            <br>
+            <div class="btnContainer">
+                <select required class="input" id="tech" name="tech">
+                    <option value="">Tech</option>
+                    <option value="alian">Alian</option>
+                    <option value="ali">Ali</option>
+                    <option value="christian">Christian</option>
+                    <option value="colorado">Colorado</option>
+                    <option value="jorgeL">Jorge L</option>
+                    <option value="ernesto">Ernesto</option>
+                    <option value="daniel">Daniel</option>
+                    <option value="campos">Campos</option>
+                </select>
+                <hr>
+                <button class="btn animate__animated animate__bounce animate" type="submit"> Wrap Up Call </button>
+            </div>
+        </form>
+    </section>
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>
