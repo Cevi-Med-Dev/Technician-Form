@@ -6,8 +6,9 @@ var rateOptions = document.querySelectorAll(".smileRating img");
 
 rateOptions.forEach((rate) => {
   rate.addEventListener("click", () => {
-    rateOptions.forEach(rate => rate.src = `./assets/imgs/${rate.name}.svg`)
-    rate.src = `./assets/imgs/${rate.name}Selected.svg`;
+    console.log("new bug")
+    rateOptions.forEach(rate => rate.src = `/assets/imgs/${rate.name}.svg`)
+    rate.src = `/assets/imgs/${rate.name}Selected.svg`;
     document.getElementById("moodRate").value = rate.name
     console.log(document.getElementById("moodRate").value, " = ", rate.name)
   });
