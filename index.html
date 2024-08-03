@@ -11,7 +11,6 @@
 
 <body>
     <section id="formContainer">
-
         <h1 class="animate__animated animate__backInLeft">Cevi Med Tech Checklist</h1>
         <form target="_blank"
             action="https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflAs9AHZzei3EO7D/wtrC6Af88tnEk0Sb7"
@@ -38,6 +37,16 @@
             </section>
             <hr>
             <section id="fields">
+               <div class="split">
+
+                   <label for="model#">Model #</label>
+                   <input class="input animate__animated animate__bounceInRight" name="model#" rows="4"></input>
+                   
+                   
+                   <label for="serial#">Serial #</label>
+                   <input class="input animate__animated animate__bounceInRight" name="serial#" rows="4"></input>
+                   
+                </div>
                 <aside>
 
                     <div>
@@ -73,7 +82,7 @@
             </div>
 
             <br>
-        
+
             <aside class="splitH">
                 <div class="split animate__animated animate__bounceInLeft">
                     <label> Procedures : </label>
@@ -85,8 +94,8 @@
                 <div class="split animate__bounceInRight">
 
                     <label><input type="checkbox" name="pendingIssues" value="pendingIssues">pending Issues</label>
-                    <textarea placeholder="give details about pending issues.." class="input animate__animated animate__bounceInRight" name="resolution"
-                        rows="4"></textarea>
+                    <textarea placeholder="give details about pending issues.."
+                        class="input animate__animated animate__bounceInRight" name="resolution" rows="4"></textarea>
                 </div>
 
             </aside>
@@ -102,7 +111,8 @@
                 </section>
                 <div class="split">
                     <label for="feedback">FeedBack</label>
-                    <textarea name="feedback" class="input animate__animated animate__bounceInRight" name="rate" rows="1"></textarea>
+                    <textarea name="feedback" class="input animate__animated animate__bounceInRight" name="rate"
+                        rows="1"></textarea>
                 </div>
                 <input id="moodRate" name="moodRate" value="" />
             </div>
