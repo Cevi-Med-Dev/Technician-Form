@@ -73,28 +73,29 @@
 
             <hr>
             <div class="split input animate__animated animate__bounceInRight">
-                <label>Equipment completion : </label>
-                <label><input type="radio" name="resolved" value="20">20%</label>
-                <label><input type="radio" name="resolved" value="40">40%</label>
-                <label><input type="radio" name="resolved" value="60">60%</label>
-                <label><input type="radio" name="resolved" value="80">80%</label>
-                <label><input type="radio" name="resolved" value="100">100%</label>
+                <label for="progress">Equipment completion : </label>
+                <label><input type="radio" name="progress" value="20">20%</label>
+                <label><input type="radio" name="progress" value="40">40%</label>
+                <label><input type="radio" name="progress" value="60">60%</label>
+                <label><input type="radio" name="progress" value="80">80%</label>
+                <label><input type="radio" name="progress" value="100">100%</label>
             </div>
 
             <br>
 
             <aside class="splitH">
                 <div class="split animate__animated animate__bounceInLeft">
-                    <label> Procedures : </label>
-                    <label><input type="checkbox" name="tested" value="tested">Tested</label>
-                    <label><input type="checkbox" name="cleaned" value="cleaned">Cleaned</label>
-                    <label><input type="checkbox" name="painted" value="painted">Painted</label>
-                    <label><input type="checkbox" name="Wrapped" value="Wrapped">Wrapped</label>
+                    <label for="procedure"> Procedures : </label>
+                    <label for="tested"><input type="checkbox" name="tested" >Tested</label>
+                    <label for="cleaned"><input type="checkbox" name="cleaned" >Cleaned</label>
+                    <label for="painted"><input type="checkbox" name="painted" >Painted</label>
+                    <label for="wrapped"><input type="checkbox" name="Wrapped" >Wrapped</label>
                 </div>
                 <div class="split animate__bounceInRight">
-                    <label><input type="checkbox" name="pendingIssues" value="pendingIssues">pending Issues</label>
+                    <label for="pendingIssues"><input type="checkbox" name="pendingIssues" >pending Issues</label>
+                    <label for="pendingIssueDescription"></label>
                     <textarea placeholder="give details about pending issues.."
-                        class="input animate__animated animate__bounceInRight" name="resolution" rows="4"></textarea>
+                        class="input animate__animated animate__bounceInRight" name="pendingIssueDescription" rows="4"></textarea>
                 </div>
 
             </aside>
@@ -110,7 +111,7 @@
                 </section>
                 <div class="split">
                     <label for="feedback">FeedBack</label>
-                    <textarea name="feedback" class="input animate__animated animate__bounceInRight" name="rate"
+                    <textarea name="feedback" class="input animate__animated animate__bounceInRight"
                         rows="1"></textarea>
                 </div>
                 <input id="moodRate" name="moodRate" value="" />

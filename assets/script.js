@@ -26,9 +26,19 @@ let call_trigger = async (url, data) => {
 
   return response; // parses JSON response into native JavaScript objects
 };
+
+
+
 call_form_.addEventListener("submit", (e) => {
   e.preventDefault();
-  //send data to Airtable
+  
+document.querySelectorAll("input[type=checkbox]").forEach(checkBox => {
+  console.log(checkBox, checkBox.value, checkBox.name)
+  checkBox.checked && call_formData.append(`${checkBox.name}`, `${checkBox.value}`)
+})
+document.querySelectorAll("input[type=radio]").forEach(radioBtn => {
+  radioBtn.checked && call_formData.append(`${radioBtn.name}`, `${radioBtn.value}`)
+})
   console.log(call_formData,call_formData.entries())
   for (var [key, value] of call_formData.entries()) {
     call_params += `${key}=${
