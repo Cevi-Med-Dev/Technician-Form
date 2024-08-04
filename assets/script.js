@@ -29,10 +29,12 @@ let call_trigger = async (url, data) => {
 call_form_.addEventListener("submit", (e) => {
   e.preventDefault();
   //send data to Airtable
+  console.log(call_formData,call_formData.entries())
   for (var [key, value] of call_formData.entries()) {
     call_params += `${key}=${
       document.querySelector("*[name=" + key + "] ").value
     }&`;
+    console.log(key, value)
   }
 
   // dataObject = Object.fromEntries(fn)
