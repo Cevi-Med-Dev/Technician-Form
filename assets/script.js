@@ -42,7 +42,8 @@ document.querySelectorAll("input[type=radio]").forEach(radioBtn => {
   console.log(call_formData,call_formData.entries())
   for (var [key, value] of call_formData.entries()) {
     call_params += `${key}=${
-      document.querySelector("*[name=" + key + "] ").value
+    
+      document.querySelector("*[name=" + key + "] ").value //  finds first radius and always sends 20%
     }&`;
     console.log(key, value)
   }
@@ -54,6 +55,9 @@ document.querySelectorAll("input[type=radio]").forEach(radioBtn => {
     call_params
   ).then((data) => {
     console.log(data);
+    call_form_.reset();
+    window.alert("Your Daily Report Has Been Sent! thank you!")
+    // window.location.reload()
   });
-  call_form_.reset();
+
 });
