@@ -37,15 +37,15 @@
             </section>
             <hr>
             <section id="fields">
-               <div class="split">
+                <div class="split">
 
-                   <label  for="modelNum">Model #</label>
-                   <input name="modelNum" class="input animate__animated animate__bounceInRight" rows="4"></input>
-                   
-                   
-                   <label for="serialNum">Serial #</label>
-                   <input class="input animate__animated animate__bounceInRight" name="serialNum" rows="4"></input>
-                   
+                    <label for="modelNum">Model #</label>
+                    <input name="modelNum" class="input animate__animated animate__bounceInRight" rows="4"></input>
+
+
+                    <label for="serialNum">Serial #</label>
+                    <input class="input animate__animated animate__bounceInRight" name="serialNum" rows="4"></input>
+
                 </div>
                 <aside>
 
@@ -67,7 +67,8 @@
             <aside class="evidence animate__animated animate__bounceInLeft">
                 <div>
                     <label class="evidenceBtn" for="file">Upload Evidence</label>
-                    <input type="file" id="file" name="file">
+                    <input type="file" id="file" name="file" accept=".jpg, .jpeg, .png, .pdf">
+                    <input type="hidden"  value="no-image-provided" id="fileURL" name="fileURL">
                 </div>
             </aside>
 
@@ -89,15 +90,17 @@
                     <label for="tested"><input type="checkbox" value="Done" name="tested">Tested</label>
                     <label for="cleaned"><input type="checkbox" value="Done" name="cleaned">Cleaned</label>
                     <label for="sanded"><input type="checkbox" value="Done" name="Sanded">Sanded</label>
-                    <label for="painted"><input type="checkbox" value="Done" name="painted" >Painted</label>
-                    <label for="Re-Tested"><input type="checkbox" value="Done" name="Re-Tested" >Re-Tested</label>
-                    <label for="wrapped"><input type="checkbox" value="Done" name="Wrapped" >Wrapped</label>
+                    <label for="painted"><input type="checkbox" value="Done" name="painted">Painted</label>
+                    <label for="Re-Tested"><input type="checkbox" value="Done" name="Re-Tested">Re-Tested</label>
+                    <label for="wrapped"><input type="checkbox" value="Done" name="Wrapped">Wrapped</label>
                 </div>
                 <div class="split animate__bounceInRight">
-                    <label for="pendingIssues"><input type="checkbox" name="pendingIssues" value="yes" >pending Issues</label>
+                    <label for="pendingIssues"><input type="checkbox" name="pendingIssues" value="yes">pending
+                        Issues</label>
                     <label for="pendingIssueDescription"></label>
                     <textarea placeholder="give details about pending issues.."
-                        class="input animate__animated animate__bounceInRight" name="pendingIssueDescription" rows="4"></textarea>
+                        class="input animate__animated animate__bounceInRight" name="pendingIssueDescription"
+                        rows="4"></textarea>
                 </div>
 
             </aside>
