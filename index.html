@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,13 +11,13 @@
 
 <body>
     <section id="formContainer">
+        <div class="preloder" style="display: none;"> <div class="loder"> </div> </div>
         <h1 class="animate__animated animate__backInLeft">Cevi Med Tech Checklist</h1>
         <form target="_blank"
             action="https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflAs9AHZzei3EO7D/wtrC6Af88tnEk0Sb7"
             method="post">
 
             <section id="flags" class="animate__animated animate__bounceInLeft">
-
                 <select class="input" id="Type" name="Type">
                     <option value="">Type of Equipment</option>
                     <option value="examTables">Exam Tables</option>
@@ -66,9 +66,13 @@
             <hr>
             <aside class="evidence animate__animated animate__bounceInLeft">
                 <div>
-                    <label class="evidenceBtn" for="file">Upload Evidence</label>
-                    <input type="file" id="file" name="file" accept=".jpg, .jpeg, .png, .pdf">
+                    <label class="evidenceBtn" for="_imgpdf_">Upload Evidence *(images, pdf)</label>
+                    <input type="file" id="_imgpdf_" name="_imgpdf_" accept=".jpg, .jpeg, .png, .pdf">
                     <input type="hidden"  value="no-image-provided" id="fileURL" name="fileURL">
+                    <!--Videos-->
+                    <label class="evidenceBtn" for="_video_">Upload Evidence *(videos)</label>
+                    <input type="file" id="_video_" name="_video_" accept=".mp4, .mpg, .avi, .mov">
+                    <input type="hidden"  value="no-video-provided" id="videoURL" name="videoURL">
                 </div>
             </aside>
 

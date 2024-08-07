@@ -4,6 +4,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow-x: hidden;
 }
 
 #formContainer{
@@ -15,6 +16,46 @@ body{
     width: 80%;
 
 }
+
+.preloder{
+    width: auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 24px;
+  }
+  
+  
+  .loder{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 5px solid #ff909f;
+    border-top: 8px solid #be0c11;
+    animation: spinner 1s linear infinite;
+    position: relative;
+  }
+  
+  @keyframes spinner{
+    0%{
+      transform: rotate(0deg);
+  
+    }
+    50%{
+      border-top-width: 5px;
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+  
+  @media screen and (max-width: 668px){
+    .loder{
+      height: 60px;
+      width: 60px;
+      border-top: 6px solid #3775FF;
+    }
+  }
 #flags{
     display: flex;
     justify-content: center;

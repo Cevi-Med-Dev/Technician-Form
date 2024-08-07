@@ -4,7 +4,7 @@ var call_params = "";
 var rate = document.querySelector(".smileRating");
 var progressNum = "%";
 var rateOptions = document.querySelectorAll(".smileRating img");
-
+var preloader = document.querySelector('.preloder');
 rateOptions.forEach((rate) => {
   rate.addEventListener("click", () => {
     rateOptions.forEach(
@@ -35,8 +35,7 @@ call_form_.addEventListener("submit", (e) => {
 
   document.querySelectorAll("input[type=checkbox]").forEach((checkBox) => {
     console.log(checkBox, checkBox.value, checkBox.name);
-    checkBox.checked &&
-      call_formData.append(`${checkBox.name}`, `${checkBox.value}`);
+    checkBox.checked ? call_formData.append(`${checkBox.name}`, `${checkBox.value}`) : call_formData.append(`${checkBox.name}`, `Not done`);
   });
 
   for (var [key, value] of call_formData.entries()) {
@@ -69,26 +68,45 @@ document.querySelectorAll("input[type=radio]").forEach((radioBtn) => {
   })
 });
 
-const uploadButton = document.getElementById("file");
-
-uploadButton.addEventListener("change", async function () {
-  const fileInput = document.getElementById("file");
+const uploadFiles = async (fileInput, type, validation) => {
+  preloader.style.display = 'block'
 
   const file = fileInput.files[0];
 
   const formData = new FormData();
   formData.append("file", file);
-  formData.append("validation", ["jpg", "png", "pdf"]);
+  formData.append("type", type);
+  formData.append("validation", validation);
 
   const request = await fetch("https://api.cevimedone.com/technician-form/", {
     method: "POST",
     body: formData,
   });
+    
 
   const response = await request.json();
-
+  if(response.status){
+    preloader.style.display = 'none'
+  }
+  //
   if (response.status === "success") {
-    document.querySelector("#fileURL").value =
-      "https://api.cevimedone.com/technician-form/" + response.url;
+    if(response.type === '_imgpd_'){
+      document.querySelector("#fileURL").value = "https://api.cevimedone.com/technician-form/" + response.url;
+    }else{
+      document.querySelector("#videoURL").value = "https://api.cevimedone.com/technician-form/" + response.url;
+    }
+    
   } else alert(response.message);
-});
+
+}
+
+// Images And PDF files
+document.getElementById("_imgpdf_").addEventListener("change", (e) =>{
+  uploadFiles(e.target, '_imgpd_',  ["jpg", "jpeg", "png", "pdf"])
+})
+// Videos files
+document.getElementById("_video_").addEventListener("change", (e) => {
+   uploadFiles(e.target, '_video_',  ["mp4", "mpg", "avi", "mov"])
+})
+
+
