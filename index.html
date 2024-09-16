@@ -18,6 +18,21 @@
         <form target="_blank"
             action="https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflAs9AHZzei3EO7D/wtrC6Af88tnEk0Sb7"
             method="post">
+            <div class="btnContainer">
+                <select required class="input" id="tech" name="tech">
+                    <option value="">Tech</option>
+                    <option value="alian">Alian</option>
+                    <option value="ali">Ali</option>
+                    <option value="christian">Christian</option>
+                    <option value="colorado">Colorado</option>
+                    <option value="jorgeL">Jorge L</option>
+                    <option value="ernesto">Ernesto</option>
+                    <option value="daniel">Daniel</option>
+                    <option value="campos">Campos</option>
+                </select>
+                <hr>
+                <button class="btn animate__animated animate__bounce animate" type="submit"> Send Report </button>
+            </div>
 <!-- 
             <section id="flags" class="animate__animated animate__bounceInLeft">
                 <select class="input" id="Type" name="Type">
@@ -105,6 +120,7 @@
                         Issues</label>
                     <label for="pendingIssueDescription"></label>
                     <textarea placeholder="give details about pending issues.."
+         
                         class="input animate__animated animate__bounceInRight" name="pendingIssueDescription"
                         rows="4"></textarea>
                 </div>
@@ -127,22 +143,6 @@
                         rows="1"></textarea>
                 </div>
                 <input id="moodRate" name="moodRate" value="" />
-            </div>
-            <br>
-            <div class="btnContainer">
-                <select required class="input" id="tech" name="tech">
-                    <option value="">Tech</option>
-                    <option value="alian">Alian</option>
-                    <option value="ali">Ali</option>
-                    <option value="christian">Christian</option>
-                    <option value="colorado">Colorado</option>
-                    <option value="jorgeL">Jorge L</option>
-                    <option value="ernesto">Ernesto</option>
-                    <option value="daniel">Daniel</option>
-                    <option value="campos">Campos</option>
-                </select>
-                <hr>
-                <button class="btn animate__animated animate__bounce animate" type="submit"> Send Report </button>
             </div>
         </form>
     </section>
