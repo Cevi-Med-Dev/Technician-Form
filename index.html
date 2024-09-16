@@ -6,17 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="icon" href="./assets/imgs/tech.svg" sizes="any" type="image/svg+xml">
     <title>CeviMed Tech Form</title>
 </head>
 
 <body>
     <section id="formContainer">
+        <img id="repairImg" src="./assets//imgs/repair.png" alt="">
         <div class="preloder" style="display: none;"> <div class="loder"> </div> </div>
-        <h1 class="animate__animated animate__backInLeft">Cevi Med Tech Checklist</h1>
+        <h1 class="animate__animated animate__backInLeft">Cevi Med Tech Check-in</h1>
         <form target="_blank"
             action="https://hooks.airtable.com/workflows/v1/genericWebhook/appELJwYYus7qLt4Q/wflAs9AHZzei3EO7D/wtrC6Af88tnEk0Sb7"
             method="post">
-
+<!-- 
             <section id="flags" class="animate__animated animate__bounceInLeft">
                 <select class="input" id="Type" name="Type">
                     <option value="">Type of Equipment</option>
@@ -69,7 +71,7 @@
                     <label class="evidenceBtn" for="_imgpdf_">Upload Evidence *(images, pdf)</label>
                     <input type="file" id="_imgpdf_" name="_imgpdf_" accept=".jpg, .jpeg, .png, .pdf">
                     <input type="hidden"  value="no-image-provided" id="fileURL" name="fileURL">
-                    <!--Videos-->
+                   
                     <label class="evidenceBtn" for="_video_">Upload Evidence *(videos)</label>
                     <input type="file" id="_video_" name="_video_" accept=".mp4, .mpg, .avi, .mov">
                     <input type="hidden"  value="no-video-provided" id="videoURL" name="videoURL">
@@ -107,7 +109,7 @@
                         rows="4"></textarea>
                 </div>
 
-            </aside>
+            </aside> -->
             <hr>
             <div>
                 <h4>How Do You Feel ?</h4>
@@ -118,6 +120,7 @@
                     <img src="./assets/imgs/kindaBad.svg" name="kindaBad" alt="kindabad">
                     <img src="./assets/imgs/bad.svg" name="bad" alt="bad">
                 </section>
+                <hr>
                 <div class="split">
                     <label for="feedback">FeedBack</label>
                     <textarea name="feedback" class="input animate__animated animate__bounceInRight"
