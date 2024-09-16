@@ -6,6 +6,10 @@ body{
     justify-content: center;
     overflow-x: hidden;
 }
+#repairImg{
+    width: 150px;
+    height: auto;
+}
 
 #formContainer{
     height: 100%;
